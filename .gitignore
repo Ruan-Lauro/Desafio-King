@@ -1,0 +1,8 @@
+# Cache e configuracoes locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Arquivos gerados pela compilacao
+bin/
+obj/
