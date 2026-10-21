@@ -128,20 +128,3 @@ Se encontrar uma situação que as regras não cobrem, decida, implemente e regi
 6. O README é claro e registra as decisões.
 
 Na entrevista técnica, você vai apresentar a solução e fazer uma pequena alteração ao vivo.
-
-## Executar os testes da implementação
-
-Com o SDK do .NET 8 ou superior instalado, execute na raiz do repositório:
-
-```powershell
-dotnet test findMyTutor/findMyTutor.Tests/findMyTutor.Tests.csproj
-```
-
-O comando restaura os pacotes e executa cinco testes em `ProfessorServicesTests`,
-chamando o serviço diretamente com os dados de `professores.json`, sem subir a API:
-
-1. Filtrar pelo idioma e excluir professores com agenda bloqueada.
-2. Exigir o mesmo horário em todos os dias pedidos.
-3. Fazer a aula inteira caber em um bloco e na faixa do aluno.
-4. Impedir conflitos, permitindo encostar em outra aula.
-5. Ordenar por quantidade de aulas e nome, com horários crescentes em `:00` ou `:30`.
