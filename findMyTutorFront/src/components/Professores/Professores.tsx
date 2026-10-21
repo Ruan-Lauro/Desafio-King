@@ -11,13 +11,11 @@ export default function Professores({ resultado, filtros }: { resultado: Resulta
   const totalPaginas = Math.ceil(total / porPagina)
   const professores = resultado.professores.slice((pagina - 1) * porPagina, pagina * porPagina)
   const dias = diasDaSemana.filter(dia => filtros.semana.includes(dia.valor)).map(dia => dia.curto).join(' · ')
-  const coresAvatar = ['bg-blue-50 text-[#014F96]', 'bg-rose-50 text-[#CC213A]', 'bg-slate-100 text-slate-600']
 
   return (
     <section className="mx-auto max-w-6xl scroll-mt-8 px-3 py-14 sm:px-8 sm:py-16" id="resultados" aria-labelledby="result-title">
       <div className="mb-8 flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
         <div>
-          <p className="text-[10px] font-bold tracking-[.2em] text-[#CC213A]">O PRÓXIMO PASSO É SEU</p>
           <h2 id="result-title" className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{total ? 'Encontramos o seu encaixe.' : 'Vamos tentar outro horário?'}</h2>
           <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500">{total ? `${total} ${total === 1 ? 'professor disponível' : 'professores disponíveis'} para a sua rotina.` : 'Nenhum professor disponível para essa combinação. Ajuste os dias ou a faixa de horário e busque novamente.'}</p>
         </div>
@@ -29,11 +27,12 @@ export default function Professores({ resultado, filtros }: { resultado: Resulta
           {professores.map(professor => (
             <article className="flex flex-col rounded-md border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md" key={professor.id}>
               <div className="flex items-center justify-between gap-3">
-                <span className={`grid size-14 place-items-center rounded-md text-xl font-bold ${coresAvatar[professor.id % 3]}`}>{professor.nome.split(' ').filter(Boolean).slice(0, 2).map(nome => nome[0]).join('')}</span>
+                <div>
+                  <h3 className="mt-5 text-xl font-bold tracking-tight text-slate-900">{professor.nome}</h3>
+                  <p className="mt-1 text-xs text-slate-500">{professor.aulasNaSemana} {professor.aulasNaSemana === 1 ? 'aula marcada' : 'aulas marcadas'} na semana</p>
+                </div>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-[10px] font-semibold text-emerald-700"><span className="size-1.5 rounded-full bg-emerald-600" />Disponível</span>
               </div>
-              <h3 className="mt-5 text-xl font-bold tracking-tight text-slate-900">{professor.nome}</h3>
-              <p className="mt-1 text-xs text-slate-500">{professor.aulasNaSemana} {professor.aulasNaSemana === 1 ? 'aula marcada' : 'aulas marcadas'} na semana</p>
               <div className="mt-6 flex items-center gap-2 border-t border-slate-100 pt-5 text-xs text-slate-500"><Icon name="calendar" className="size-4 shrink-0 text-[#014F96]" /><span>{dias}</span><span className="ml-auto shrink-0">{filtros.duracao} min / aula</span></div>
               <p className="mb-3 mt-5 text-xs font-medium text-slate-500">Horários de início em comum</p>
               <ul className="mb-6 flex flex-wrap gap-2" aria-label={`Horários disponíveis de ${professor.nome}`}>

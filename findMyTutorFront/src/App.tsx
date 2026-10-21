@@ -114,7 +114,7 @@ function App() {
         <main>
           <section className="mx-auto max-w-6xl flex flex-col lg:flex-row max-lg:items-center items-self gap-10 px-3 pb-16 pt-5 sm:px-8 lg:gap-16 lg:pb-20 lg:pt-9" aria-labelledby="hero-title">
             <div className="max-w-xl pb-1 lg:pb-8 max-lg:text-center">
-              <p className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[9px] font-semibold tracking-[.18em] text-blue-100 sm:text-[10px]"><span className="size-1.5 rounded-full bg-[#f66b80]" />NOVO IDIOMA</p>
+              <p className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-[9px] font-semibold tracking-[.18em] text-blue-100 sm:text-[10px]">NOVO IDIOMA</p>
               <h1 id="hero-title" className="text-4xl md:text-5xl xl:text-6xl font-bold">Encontre o<br />professor correto<br />que siga <span className="relative inline-block text-blue-200">o ritmo.<span aria-hidden="true" className="absolute -bottom-2 left-0 h-1 w-full -rotate-2 rounded-full bg-[#CC213A]" /></span></h1>
               <p className="mt-8 max-w-97.5 text-[15px] leading-7 text-blue-100/85">Encontre o professor de acordo com sua disponibilidade e preferências.</p>
             </div>
