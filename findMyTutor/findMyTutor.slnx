@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="findMyTutor/findMyTutor.csproj" />
+  <Project Path="findMyTutor.Tests/findMyTutor.Tests.csproj" />
 </Solution>
