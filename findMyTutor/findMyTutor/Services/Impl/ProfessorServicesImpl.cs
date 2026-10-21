@@ -261,5 +261,15 @@ namespace findMyTutor.Services.Impl
         {
             return _repository.BuscarTodos();
         }
+
+        public List<string> ListarIdiomas()
+        {
+            var professores = _repository.BuscarTodos();
+            var idiomas = professores
+                .SelectMany(professor => professor.Idiomas)
+                .Distinct()
+                .ToList();
+            return idiomas;
+        }
     }
 }

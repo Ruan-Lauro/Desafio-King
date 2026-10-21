@@ -7,5 +7,6 @@ namespace findMyTutor.Services
     {
         ResultadoBuscaDto Buscar(BuscarProfessoresDto filtros);
         List<Professor> BuscarTodos();
+        List<string> ListarIdiomas();
     }
 }

@@ -25,6 +25,13 @@ namespace findMyTutor.Controllers
             return Ok(professores);
         }
 
+        [HttpGet("idiomas")]
+        public IActionResult ListarIdiomas()
+        {
+            var idiomas = _professorServices.ListarIdiomas();
+            return Ok(idiomas);
+        }
+
         [HttpPost("busca")]
         public ActionResult<ResultadoBuscaDto> Buscar(
             [FromBody] BuscarProfessoresDto filtros)

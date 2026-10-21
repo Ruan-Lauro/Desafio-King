@@ -47,25 +47,6 @@ internal sealed class ContextoBusca : IDisposable
         DuracaoMinutos = duracao
     };
 
-    public static Professor ProfessorLivre(
-        int id = 1, string nome = "Professor teste",
-        params Disponibilidade[] blocos) => new()
-    {
-        Id = id,
-        Nome = nome,
-        Idiomas = ["Inglês"],
-        AgendaBloqueada = false,
-        Disponibilidade = blocos.Length == 0
-            ? [Bloco("segunda", "18:00", "22:00")]
-            : blocos.ToList()
-    };
-
-    public static Disponibilidade Bloco(string dia, string inicio, string fim) => new()
-    {
-        Dia = dia,
-        Inicio = TimeOnly.ParseExact(inicio, "HH:mm"),
-        Fim = TimeOnly.ParseExact(fim, "HH:mm")
-    };
 
     public void Dispose() => Directory.Delete(_pasta, recursive: true);
 
