@@ -61,7 +61,31 @@ npm run preview -- --port 5173 --strictPort
 
 A prévia usa a mesma porta autorizada pelo CORS da API.
 
-## Organização e decisões
+## Processo de desenvolvimento e decisões técnicas
+
+Após concluir a implementação principal da API, configurei o projeto com React,
+TypeScript e Vite e instalei as dependências necessárias. Comecei pela estrutura
+do formulário, pelo controle de estado dos campos e pela integração HTTP com
+o back-end, organizando o envio dos filtros no `handleSubmit`.
+
+Separei a apresentação dos professores em um componente responsável pela listagem
+e pelo estado sem resultados. Mantive a interface simples e focada nos requisitos:
+informar os filtros, consultar a API e apresentar os horários disponíveis e os
+motivos de exclusão. Escolhi Tailwind CSS pela praticidade na composição do layout
+e pela rapidez para ajustar a apresentação diretamente nos componentes.
+
+Usei um formulário da King como referência visual e solicitei apoio da IA para
+refinamentos estéticos e para revisar a cobertura dos requisitos. A assistência
+também incluiu a paginação da listagem. A proposta visual inicial adicionou mais
+elementos do que eu pretendia para o escopo da tela; revisei o resultado, removi
+os elementos excedentes e ajustei o layout para manter o formulário e a busca
+como foco da interface.
+
+As sugestões da IA passaram por revisão e ajustes manuais antes da finalização
+do front-end. O objetivo foi manter uma solução simples, coerente com a proposta
+e integrada ao contrato da API.
+
+## Organização da implementação
 
 - `src/App.tsx`: formulário, validação e chamada HTTP no `handleSubmit`.
 - `src/components/Professores/Professores.tsx`: resultados, exclusões e paginação.
