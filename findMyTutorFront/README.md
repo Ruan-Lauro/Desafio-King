@@ -14,14 +14,14 @@ professores não elegíveis e paginação local de três resultados por página.
 Execute a partir da raiz do repositório (`Desafio-King`):
 
 ```powershell
-npm ci
 cd findMyTutorFront
 npm ci
 npm run dev
 ```
 
-A instalação na raiz é necessária porque as dependências do Tailwind estão no
-`package.json` da raiz. React e Vite são instalados na pasta do front-end.
+Todas as dependências do front-end, incluindo React, Vite e Tailwind CSS, estão
+definidas em `findMyTutorFront/package.json`. A instalação é feita somente nessa
+pasta. Se o terminal já estiver em `findMyTutorFront`, comece por `npm ci`.
 
 Acesse http://localhost:5173. A porta é fixa; se estiver ocupada, encerre a outra
 instância antes de iniciar o front.

@@ -1,5 +1,20 @@
 # Desafio técnico: Encontre um Professor
 
+## Como executar a implementação
+
+O passo a passo de instalação, configuração, compilação e execução está no README
+de cada projeto:
+
+- [Back-end .NET](findMyTutor/README.md): API, HTTPS, CORS e testes automatizados.
+- [Front-end React](findMyTutorFront/README.md): dependências, Tailwind, URL da API e compilação.
+
+Inicie a API e o front-end em terminais separados. O front é acessado em
+http://localhost:5173 e a API em https://localhost:7268. Os comandos npm são
+executados somente na pasta `findMyTutorFront`.
+
+O uso de IA está documentado separadamente para o
+[back-end](findMyTutor/USO_DE_IA.md) e o [front-end](findMyTutorFront/USO_DE_IA.md).
+
 ## Contexto
 
 Uma escola de idiomas precisa encontrar professores disponíveis para cada novo aluno. O aluno informa o idioma, os dias da semana, a faixa de horário em que pode ter aula e a duração da aula; o sistema devolve os professores que conseguem atendê-lo e em quais horários.
