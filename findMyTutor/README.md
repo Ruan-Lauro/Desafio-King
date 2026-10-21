@@ -116,7 +116,7 @@ vazio e duração inválida. Eles não precisam da API em execução.
 ## Escopo e pendências
 
 A configuração descrita é para desenvolvimento local; a publicação em produção
-não foi configurada. O auxiliar dos testes ainda cria pastas temporárias sem
-descarte explícito nos testes.
+não foi configurada. As pastas temporárias dos testes são removidas pelo descarte
+do contexto ao final de cada teste.
 
 Detalhes da assistência por IA: [USO_DE_IA.md](USO_DE_IA.md).
